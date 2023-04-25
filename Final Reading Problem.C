@@ -10,10 +10,10 @@ char input[100];
     float voltage, current, pf, KW;
     float readings[100][4];
 
-    printf("Enter string of readings (type 'exit' to quit):\n");
+    printf("Enter string of readings in the sample format voltage 265,current 65,pf 0.91,KW 1289.33 (type '#' to quit):\n");
    while (1){
         fgets(input, 100, stdin);
-        if (strcmp(input, "exit\n") == 0) {
+        if (strcmp(input, "#\n") == 0) {
             break;
         }
         sscanf(input, "voltage %f, current %f, pf %f,KW %f", &voltage, &current, &pf, &KW);
@@ -36,4 +36,6 @@ char input[100];
 
     return 0;
 }
+
+
 
